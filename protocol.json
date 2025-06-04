@@ -1,0 +1,11 @@
+{
+  "interface": {
+    "functions": [
+      {"name": "execute_step", "input_schema": "local"}
+    ]
+  },
+  "validation_schema": "local",
+  "pii_policy": {"mask_email": true, "mask_phone": true},
+  "retry_policy": {"max_attempts": 3, "backoff": "exponential"},
+  "escalation": {"on_error": "halt_with_error"}
+}
