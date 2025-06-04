@@ -1,0 +1,24 @@
+{
+  "manifest_meta": {
+    "title": "Example Project",
+    "version": "1.0.0",
+    "hash": "",
+    "created": "2024-01-01T00:00:00Z"
+  },
+  "roles": [
+    {"id": "exec", "name": "Executor", "description": "Runs commands"}
+  ],
+  "tasks": [
+    {
+      "id": "hello",
+      "role": "exec",
+      "description": "Echo hello",
+      "command": "echo hello world",
+      "inputs": [],
+      "outputs": [],
+      "depends_on": [],
+      "acceptance": "Output contains hello"
+    }
+  ],
+  "macro_order": ["hello"]
+}
